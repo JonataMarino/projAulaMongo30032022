@@ -13,7 +13,7 @@ while (i == 0):
 
    if x == 1 :
        dadosClassInd = open(
-           "I:/logatti/Linguagens de programação/30_03_22/SistemaClassInd- dadosgovbr/ListaJogosDadosAbertos.csv",
+           "G:/logatti/Linguagens de programação/30_03_22/SistemaClassInd- dadosgovbr/ListaJogosDadosAbertos.csv",
            encoding="utf8")
 
        for linhas in dadosClassInd.readlines():
@@ -50,8 +50,6 @@ while (i == 0):
            mydoc = mycol.find().sort("País de Origem", 1)
            for x in mydoc:
                print(x)
-       else:
-           y= int(input('digite um valor de consuta válido!'))
    if x == 3:
     i = 1
    if x == 4:
