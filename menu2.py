@@ -36,8 +36,8 @@ while (i == 0):
 
    elif x == 2:
        print('CONSULTA DE DADOS')
-       y = int(input('Digite 1 para consultar  Anos de produção\n Digite 2 para consultar as Classifiações Atribuidas\n'
-                     'Digite 3 para consultar o País de Origem.\n'))
+       y = int(input('Digite 1 para consultar  Anos de produção.\n Digite 2 para consultar as Classifiações Atribuidas.\n'
+                     ' Digite 3 para consultar o País de Origem.\n Digite 4 para consultar Gênero.\n'))
        if y == 1:
 
            for x in mycol.find({},{'_id': 0, 'Ano de produção': 1}):
@@ -49,6 +49,9 @@ while (i == 0):
 
        elif y == 3:
            for x in mycol.find({}, {'_id': 0,'País de Origem': 1}):
+               print(x)
+       elif y ==4:
+           for x in mycol.find({}, {'_id': 0,'Gênero': 1}):
                print(x)
 
    elif x == 3:
