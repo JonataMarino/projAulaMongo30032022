@@ -39,25 +39,23 @@ while (i == 0):
        y = int(input('Digite 1 para consultar  Anos de produção\n Digite 2 para consultar as Classifiações Atribuidas\n'
                      'Digite 3 para consultar o País de Origem.\n'))
        if y == 1:
-           filter_query = {"Ano de Produção":{"$regex" : "^S"}}
-           mydoc = mycol.find(filter_query).sort('Ano de produção',1)
-           for x in mydoc:
+
+           for x in mycol.find({},{'_id': 0, 'Ano de produção': 1}):
                print(x)
        elif y == 2:
-           filter_query = {"Classificação Atribuída": {"$regex" : "^S"}}
-           mydoc = mycol.find(filter_query).sort("Classificação Atribuída", 1)
-           for x in mydoc:
+
+           for x in mycol.find({}, {'_id': 0, 'Classificação Atribuída': 1}):
                print(x)
+
        elif y == 3:
-           filter_query = {"País de Origem" : {"$regex" : "^S"}}
-           mydoc = mycol.find(filter_query).sort("País de Origem", 1)
-           for x in mydoc:
+           for x in mycol.find({}, {'_id': 0,'País de Origem': 1}):
                print(x)
-   if x == 3:
+
+   elif x == 3:
     i = 1
-   if x == 4:
+   elif x == 4:
         d= mycol.delete_many({})
         print(d.deleted_count, " documentos apagados.")
 
-   elif x != 1 and x != 2 and x != 3:
+   else:
        print('Digite um valor válido!')
