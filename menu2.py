@@ -13,7 +13,7 @@ while (i == 0):
 
    if x == 1 :
        dadosClassInd = open(
-           "I:/logatti/Linguagens de programação/30_03_22/SistemaClassInd- dadosgovbr/ListaJogosDadosAbertos.csv",
+           "G:/logatti/Linguagens de programação/30_03_22/SistemaClassInd- dadosgovbr/ListaJogosDadosAbertos.csv",
            encoding="utf8")
 
        for linhas in dadosClassInd.readlines():
